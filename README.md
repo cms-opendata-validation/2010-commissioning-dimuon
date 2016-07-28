@@ -10,27 +10,27 @@ you need to create a working area and set up a proper CMS environment.
 ## Creating the Working Area
 
 This step is only needed the first time.
-...
+```
 cmsrel CMSSW_4_2_8
-...
+```
 
 ## Cloning and copying the 2010-commissioning-dimuon repository from Github
-...
+```
 git clone https://github.com/cms-opendata-validation/2010-commissioning-dimuon
 cp -R 2010-commissioning-dimuon/Demo CMSSW_4_2_8/src
-...
+```
 
 ## Setting up the CMS environment
-...
+```
 cd CMSSW_4_2_8/src/Demo/DemoAnalyzer
 cmsenv
-...
+```
 
 ## Compiling and Running
-...
+```
 scram b
 cmsRun demoanalyzer_cfg.py
-...
+```
 
 After analysis, Commissioning00val.root file should be created. 
 Then, is necessary to change input and also output files in demoanalyzer_cfg.py, to save these changes and to rerun program. 
@@ -48,9 +48,9 @@ When you rerun for all four index files you should have four root files with nam
  Commissioning04val.root
 
 The last thing what you should do is to merge these four root files into one root file.
-You do this as follow. In the downloaded repository is also file with name mergeCommissioning.C
+You do this as follow. In the downloaded repository is also file with name mergeCommissioning.C .
 Press command for opening ROOT program: root
-In this programe just type command: .x mergeCommissioning.C 
+In this programe just type command: .x mergeCommissioning.C .
 This merging create a root file called CommissioningAllval.root.
 
 To look at this output, write down command: new TBrowser
