@@ -1,7 +1,6 @@
 # 2010-commissioning-dimuon
                         
-Validation code for 2010 Commissioning dataset, based on dimuon mass spectrum
-
+Validation code for 2010 Commissioning dataset, based on dimuon mass spectrum.
 You need to work in a Virtual Machine properly contextualized for CMS.
 
 In order to run the demoanalyzer_cfg.py to create the Commissioning ROOT files, 
@@ -53,5 +52,8 @@ Press command for opening ROOT program: root
 In this programe just type command: .x mergeCommissioning.C .
 This merging create a root file called CommissioningAllval.root.
 
-To look at this output, write down command: new TBrowser
+To look at this output, write down command: 
+```
+new TBrowser
+```
 and navigate to relevant file.
