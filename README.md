@@ -55,15 +55,13 @@ You do this as follow. In the downloaded repository is also file with name merge
 Press command for opening ROOT program: 
 ```
 root
-
 ```
 In this programe just type command:
 ```
 .x mergeCommissioning.C .
-
 ```
 This merging create a root file called CommissioningAllval.root .
-To look at this output, write down command: 
+To look at this output, write down command in ROOT program: 
 ```
 new TBrowser
 ```
