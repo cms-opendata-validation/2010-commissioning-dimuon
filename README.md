@@ -11,6 +11,8 @@ you need to create a working area and set up a proper CMS environment.
 This step is only needed the first time.
 ```
 cmsrel CMSSW_4_2_8
+cd CMSSW_4_2_8/src
+
 ```
 
 ## Cloning the 2010-commissioning-dimuon repository from Github
@@ -21,7 +23,7 @@ git clone https://github.com/cms-opendata-validation/2010-commissioning-dimuon  
 
 ## Setting up the CMS environment
 ```
-cd CMSSW_4_2_8/src/Validation/Commissioning_dimuon_2010
+cd Validation/Commissioning_dimuon_2010
 cmsenv
 
 ```
@@ -50,10 +52,17 @@ When you rerun for all four index files you should have four root files with nam
 
 The last thing what you should do is to merge these four root files into one root file.
 You do this as follow. In the downloaded repository is also file with name mergeCommissioning.C .
-Press command for opening ROOT program: root
-In this programe just type command: .x mergeCommissioning.C .
-This merging create a root file called CommissioningAllval.root.
+Press command for opening ROOT program: 
+```
+root
 
+```
+In this programe just type command:
+```
+.x mergeCommissioning.C .
+
+```
+This merging create a root file called CommissioningAllval.root .
 To look at this output, write down command: 
 ```
 new TBrowser
