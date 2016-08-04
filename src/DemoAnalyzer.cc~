@@ -117,7 +117,7 @@ TH1D *h203;
 // constructors and destructor
 //
 
-Commissioning_dimuon_2010::Commissioning_dimuon_2010(const edm::ParameterSet& iConfig) {
+Commissioning::Commissioning_dimuon_2010(const edm::ParameterSet& iConfig) {
 
 // *****************************************************************
 // This is the main analysis routine
