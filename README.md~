@@ -13,24 +13,22 @@ This step is only needed the first time.
 cmsrel CMSSW_4_2_8
 ```
 
-## Cloning the 2010-commissioning-dimuon repository from Github
+## Cloning and copying the 2010-commissioning-dimuon repository from Github
 ```
-git clone https://github.com/cms-opendata-validation/2010-commissioning-dimuon  Validation/Commissioning_dimuon_2010
-
+git clone https://github.com/cms-opendata-validation/2010-commissioning-dimuon
+cp -R 2010-commissioning-dimuon/Demo CMSSW_4_2_8/src
 ```
 
 ## Setting up the CMS environment
 ```
-cd CMSSW_4_2_8/src/Validation/Commissioning_dimuon_2010
+cd CMSSW_4_2_8/src/Demo/DemoAnalyzer
 cmsenv
-
 ```
 
 ## Compiling and Running
 ```
 scram b
 cmsRun demoanalyzer_cfg.py
-
 ```
 
 After analysis, Commissioning00val.root file should be created. 

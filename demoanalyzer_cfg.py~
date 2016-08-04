@@ -34,14 +34,14 @@ import FWCore.Utilities.FileUtils as FileUtils
 # ****************************************************************
 
 # *** Commissioning data set ***
-files2010data = FileUtils.loadListFromFile ('/home/cms-opendata/CMSSW_4_2_8/src/Validation/Commissioning-dimuon-2010/datasets/CMS_Run2010B_Commissioning_AOD_Apr21ReReco-v1_0000_file_index.txt')
+files2010data = FileUtils.loadListFromFile ('/home/cms-opendata/CMSSW_4_2_8/src/Validation/Commissioning/datasets/CMS_Run2010B_Commissioning_AOD_Apr21ReReco-v1_0000_file_index.txt')
 process.source = cms.Source("PoolSource",fileNames = cms.untracked.vstring(*files2010data))
 
 # *************************************************
 # number of events to be skipped (0 by default)   *
 # *************************************************
 process.source.skipEvents = cms.untracked.uint32(0)
-process.demo = cms.EDAnalyzer('Commissioning-dimuon-2010')
+process.demo = cms.EDAnalyzer('Commissioning')
 # ***********************************************************
 # output file name                                          *
 # change this according to input file, or according to wish *

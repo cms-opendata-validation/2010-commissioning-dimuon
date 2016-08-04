@@ -1,9 +1,9 @@
 // -*- C++ -*-
 //
-// Package:    Commissioning
-// Class:      Commissioning
+// Package:    Commissioning_dimuon_2010
+// Class:      Commissioning_dimuon_2010
 // 
-/**\class Commissioning DemoAnalyzer.cc Validation/Commissioning/src/DemoAnalyzer.cc
+/**\class Commissioning DemoAnalyzer.cc Validation/Commissioning_dimuon_2010/src/DemoAnalyzer.cc
 
  Description: [one line class summary]
 
@@ -64,10 +64,10 @@
 // class declaration
 //
 
-class Commissioning: public edm::EDAnalyzer {
+class Commissioning_dimuon_2010: public edm::EDAnalyzer {
 public:
-	explicit Commissioning(const edm::ParameterSet&);
-	~Commissioning();
+	explicit Commissioning_dimuon_2010(const edm::ParameterSet&);
+	~Commissioning_dimuon_2010();
 
 private:
 	virtual void beginJob();
@@ -117,7 +117,7 @@ TH1D *h203;
 // constructors and destructor
 //
 
-Commissioning::Commissioning(const edm::ParameterSet& iConfig) {
+Commissioning::Commissioning_dimuon_2010(const edm::ParameterSet& iConfig) {
 
 // *****************************************************************
 // This is the main analysis routine
@@ -225,7 +225,7 @@ h203 = fs->make<TH1D>("Lumi section", "Lumi section", 300, 0, 3000);
 }
 
 
-Commissioning::~Commissioning() {
+Commissioning_dimuon_2010::~Commissioning_dimuon_2010() {
 	// do anything here that needs to be done at destruction time
 	// (e.g. close files, deallocate resources etc.)
 }
@@ -237,7 +237,7 @@ Commissioning::~Commissioning() {
 //
 
 // ------------ method called for each event  ------------
-void Commissioning::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup) {
+void Commissioning_dimuon_2010::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup) {
 
 // **********************************************
 // here each relevant event will get analyzed 
@@ -459,7 +459,7 @@ if (!providesGoodLumisection(iEvent)) {
 
 
 // ---- method called for each event to check good quality lumi section ---- //
-bool Commissioning::providesGoodLumisection(const edm::Event& iEvent) {
+bool Commissioning_dimuon_2010::providesGoodLumisection(const edm::Event& iEvent) {
 
 // check JSON "by hand"
 // This is a 'primitive' check which has the advantage that it also works 
@@ -775,15 +775,15 @@ bool Commissioning::providesGoodLumisection(const edm::Event& iEvent) {
 
 
 // ------------ method called once each job just before starting event loop  ------------
-void Commissioning::beginJob() {
+void Commissioning_dimuon_2010::beginJob() {
 
 }
 
 // ------------ method called once each job just after ending the event loop  ------------
-void Commissioning::endJob() {
+void Commissioning_dimuon_2010::endJob() {
 }
 
 //define this as a plug-in
-DEFINE_FWK_MODULE(Commissioning);
+DEFINE_FWK_MODULE(Commissioning_dimuon_2010);
 
 
