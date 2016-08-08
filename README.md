@@ -2,6 +2,8 @@
                         
 Validation code for 2010 Commissioning dataset, based on dimuon mass spectrum.
 You need to work in a Virtual Machine properly contextualized for CMS.
+Everything is available on the CERN Open Data Portal http://opendata.cern.ch/VM/CMS/2010.
+
 
 In order to run the demoanalyzer_cfg.py to create the Commissioning ROOT files, 
 you need to create a working area and set up a proper CMS environment.
@@ -11,28 +13,26 @@ you need to create a working area and set up a proper CMS environment.
 This step is only needed the first time.
 ```
 cmsrel CMSSW_4_2_8
-cd CMSSW_4_2_8/src
-
 ```
-
+Type this command to change directory:
+```
+cd CMSSW_4_2_8/src
+```
 ## Cloning the 2010-commissioning-dimuon repository from Github
 ```
 git clone https://github.com/cms-opendata-validation/2010-commissioning-dimuon  Validation/Commissioning_dimuon_2010
-
 ```
 
 ## Setting up the CMS environment
 ```
 cd Validation/Commissioning_dimuon_2010
 cmsenv
-
 ```
 
 ## Compiling and Running
 ```
 scram b
 cmsRun demoanalyzer_cfg.py
-
 ```
 
 After analysis, Commissioning00val.root file should be created. 
@@ -43,6 +43,7 @@ In the  repository from github are index files with names:
  CMS_Run2010B_Commissioning_AOD_Apr21ReReco-v1_0003_file_index.txt
  CMS_Run2010B_Commissioning_AOD_Apr21ReReco-v1_0004_file_index.txt   
 
+These index files are the same as you can find in the open data portal record http://opendata.cern.ch/record/2 ,they are copied here for convenience.  
  
 When you rerun for all four index files you should have four root files with names:
  Commissioning00val.root
@@ -60,7 +61,7 @@ In this programe just type command:
 ```
 .x mergeCommissioning.C .
 ```
-This merging create a root file called CommissioningAllval.root .
+This merging creates a root file called CommissioningAllval.root .
 To look at this output, write down command in ROOT program: 
 ```
 new TBrowser
