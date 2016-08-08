@@ -45,7 +45,8 @@ In the datesets directory in the repository from github are index files with nam
  CMS_Run2010B_Commissioning_AOD_Apr21ReReco-v1_0003_file_index.txt
  CMS_Run2010B_Commissioning_AOD_Apr21ReReco-v1_0004_file_index.txt   
 
-These index files are the same as you can find in the open data portal record http://opendata.cern.ch/record/2 , they are copied here for convenience and also for details of the analysis you can read comments in the analysis code DemoAnalyzer.cc .        It necessary to note that whole analysis can take around X hours. 
+These index files are the same as you can find in the open data portal record http://opendata.cern.ch/record/2 , they are copied here for convenience and also for details of the analysis you can read comments in the analysis code DemoAnalyzer.cc .        
+It necessary to note that whole analysis can take around X hours! 
  
 When you rerun for all four index files you should have four root files with names:
  Commissioning00val.root
@@ -68,4 +69,4 @@ To look at this output, write down command in ROOT program:
 ```
 new TBrowser
 ```
-and navigate to relevant file.
+and navigate to relevant file. The most interesting histogram is GM_mass_log. This is the validation histogram. 
