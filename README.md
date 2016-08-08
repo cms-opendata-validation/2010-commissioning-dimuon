@@ -14,11 +14,12 @@ This step is only needed the first time.
 ```
 cmsrel CMSSW_4_2_8
 ```
+## Cloning the 2010-commissioning-dimuon repository from Github
 Type this command to change directory:
 ```
 cd CMSSW_4_2_8/src
 ```
-## Cloning the 2010-commissioning-dimuon repository from Github
+For cloning type:
 ```
 git clone https://github.com/cms-opendata-validation/2010-commissioning-dimuon  Validation/Commissioning_dimuon_2010
 ```
