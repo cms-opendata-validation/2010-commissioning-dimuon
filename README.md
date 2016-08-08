@@ -38,7 +38,7 @@ cmsRun demoanalyzer_cfg.py
 
 After analysis, Commissioning00val.root file should be created. 
 Then, is necessary to change input and also output files in demoanalyzer_cfg.py, to save these changes and to rerun program. 
-In the  repository from github are index files with names:
+In the datesets directory in the repository from github are index files with names:
  CMS_Run2010B_Commissioning_AOD_Apr21ReReco-v1_0000_file_index.txt
  CMS_Run2010B_Commissioning_AOD_Apr21ReReco-v1_0002_file_index.txt
  CMS_Run2010B_Commissioning_AOD_Apr21ReReco-v1_0003_file_index.txt
